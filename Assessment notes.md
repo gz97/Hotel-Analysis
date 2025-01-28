@@ -1,3 +1,4 @@
+## Overview
 -	Deadline is **Thursday, 30th January 2025, 12:00pm**
 -	Your report should encompass **insights, visualizations, etc.**, presented **using Power BI, highlighting your skills with the tool**. The **content** and **presentation** of results will be evaluated.
 -	Dedicate approximately 2-4 hours to this task. While you have the liberty to choose your preferred tool, please specify the use of Power BI. If any coding is involved (e.g., in R), include it in the final report but exclude it from the 2 standard A4 pages limit.
@@ -11,3 +12,4 @@
 2.	Added DIM Date table and Measures table
 3.	Created GitHub Kanban board
 
+![alt text](image.png)

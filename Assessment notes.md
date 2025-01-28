@@ -11,5 +11,15 @@
     2.	Added ct column to FACTs
 2.	Added DIM Date table and Measures table
 3.	Created GitHub Kanban board
-
-![alt text](image.png)
+4. Performed EDA of reservations
+   1. Categorical variables
+      1. Histograms to see the distribution of categorical variables
+      2. Heat maps of categorical variables
+   2. Continuous variables
+      1. Added stay length 
+         1. Actual arrival and departure times used, unless blank, then assumed arrival and departure times used
+         2. Noticed stay length = 0 for a handful of data
+            ![alt text](image.png)
+           3. I assume most are data errors, like the example below. This guest was the only one with a duplicate record here showing the reason
+            ![alt text](image-1.png) 
+        4. 

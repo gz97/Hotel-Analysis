@@ -29,4 +29,12 @@
             ![alt text](image-1.png) 
 5. Performed EDA of invoices
    1. 8,579 invoices at the start
-   2. Knowing that some of the invoices are duplicated, I removed any invoices which didn't correspond to a reservation in the Reservations table
+   2. Knowing that some of the invoices are duplicated, I removed any invoices which didn't correspond to a reservation in the Reservations table. I was left with 8,382 invoices
+   3. I looked into Quantity for the orders. There are 4 invoices when the quantity is -1 and they're all food orders. This could be a missing field, which was replaced with -1 or an error where a minus was added by accident. The chances that this is a 1 are the highest, so I've **replaced these with a 1**. 
+![alt text](image-3.png)
+    4. I then looked into the Total column. 
+       1. I realised that the total is already multiplied by quantity, so I changed my measure Total Quantity from SUMX() to a regular SUM(). 
+       2. I also noticed a big spike in a value 13.95 euro, which was Breakfast prebooked. I reconciled Breakfast prebooked and Prebooked Breakfast Menu to Breakfast prebooked.
+       3. I noticed Total = 0 for some Breakfast prebooked. I changed the value in PQ to be 13.95 * number of persons.
+       4. I reconciled Breakfast on the day and On the day Breakfast Menu to Breakfast on the day.
+       5. I inspected the negative Total values. The ones with a word 'Discount' I left as they were. The ones which were negative and looked like normal transactions, I multiplied by -1 to make them positive.

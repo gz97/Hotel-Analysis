@@ -38,3 +38,16 @@
        3. I noticed Total = 0 for some Breakfast prebooked. I changed the value in PQ to be 13.95 * number of persons.
        4. I reconciled Breakfast on the day and On the day Breakfast Menu to Breakfast on the day.
        5. I inspected the negative Total values. The ones with a word 'Discount' I left as they were. The ones which were negative and looked like normal transactions, I multiplied by -1 to make them positive.
+6. Data modeling
+   1. Added a DIM Date table with dates
+   2. Added a Measures table
+   3. Connected (FACT) Reservations Arrival Date to DIM Date with an active relationship. All other dates have an inactive relationship to DIM Date [Date]
+   4. **FINISH THIS**
+7. Discuss overvie page and the idea behind it
+8. Customer page
+   1. Focuses on returning customers versus revenue
+   2. Do my customers return? That is good to know together with the revenue. So, does my revenue increase the more visits I have? 
+      1. If yes, then I might want to think of incentives like discounts for the next stay.
+      2. But if no, then you might want to focus on a good experience to keep your reviews high, but also give incentives to new customers, like free drinks/food/breakfast discount
+      3. For this, the analysis of items is needed, so we know what is most popular for 1st/2nd/3rd visit and we can adjust our incentives accordingly.
+   3. 

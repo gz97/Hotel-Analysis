@@ -8,9 +8,9 @@
 ## Steps taken
 1.	Load data into Power BI
     1. Changed certain column names, table names, data types
-    2.	Added ct column to FACTs
+    2.	Added ct column to FACTs (I use this column when I aggregate the table. Its purpose is purely to simplify the measures)
 2.	Added DIM Date table and Measures table
-3.	Created GitHub Kanban board
+3.	Created GitHub Kanban board (GitHub project to track my work)
 4. Performed EDA of reservations
    1. Overview of the data
       1. 3,234 reservations from 3,034 guests. 
@@ -42,12 +42,16 @@
    1. Added a DIM Date table with dates
    2. Added a Measures table
    3. Connected (FACT) Reservations Arrival Date to DIM Date with an active relationship. All other dates have an inactive relationship to DIM Date [Date]
-   4. **FINISH THIS**
-7. Discuss overvie page and the idea behind it
-8. Customer page
-   1. Focuses on returning customers versus revenue
-   2. Do my customers return? That is good to know together with the revenue. So, does my revenue increase the more visits I have? 
-      1. If yes, then I might want to think of incentives like discounts for the next stay.
-      2. But if no, then you might want to focus on a good experience to keep your reviews high, but also give incentives to new customers, like free drinks/food/breakfast discount
-      3. For this, the analysis of items is needed, so we know what is most popular for 1st/2nd/3rd visit and we can adjust our incentives accordingly.
-   3. 
+   4. Connected FACT Reservations and FACT Invoices on Reservation Id. There is no ambiguity in the model as all relationships follow in the same direction. I treated the invoices as an 'extension' of the Reservations.
+7. Overview page
+   1. Is my hotel booked at a stable rate? Events in progress show open reservations per date period (https://www.daxpatterns.com/events-in-progress/).
+   2. We can also see if we lost a lot of bookings, and if we do, are they short or long-stay visits? Does the party-size matter? 
+   3. I can also inspect my booking window based on the reservation source filter. 
+   4. What are the trends in my revenue based on the party size and reservation source?
+8.  Customer page
+       1. Focuses on returning customers versus revenue
+       2. Do my customers return? That is good to know together with the revenue. So, does my revenue increase the more visits I have? 
+       3. If yes, then I might want to think of incentives like discounts for the next stay.
+       4. But if no, then you might want to focus on a good experience to keep your reviews high, but also give incentives to new customers, like free drinks/food/breakfast discount
+       5. For this, the analysis of items is needed, so we know what is most popular for 1st/2nd/3rd visit and we can adjust our incentives accordingly.
+       6. Addionally, we can also look at stay length to see how revenue streams peak/drop based on how long the guest is staying. We can then offer different approach to different clients.
